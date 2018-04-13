@@ -1,0 +1,16 @@
+
+
+.logo {
+	height: 280px;
+    width: 280px;
+    margin-left: 42px;
+}
+
+.imgDiv{
+	border: 5px solid #3e1911;
+	background: white;
+}
+
+#bench{
+	width: 100%;
+}
