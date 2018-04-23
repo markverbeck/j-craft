@@ -21,11 +21,41 @@ render(){
 		<div>
 		<div className="container">
 			<div className="row">
+				<div className="col-md-12">
+					<NavBar />
+				</div>
+			</div>
+		</div>
+		<div className="container">
+			<div className="row">
 				<div className="col-md-1"></div>
 				<div className = "col-md-10">
+
 					<Carousel />
 				</div>
 				<div className="col-md-1"></div>
+			</div>
+		</div>
+
+		<div className="container">
+			<div className="row">
+				
+				<div className="col-md-1"></div>
+				<div className = "col-md-4 woodMaster">
+					<div className="col-md-2">
+						<i id="workBucket" className="fas fa-briefcase"></i>
+					</div>
+					<div className="col-md-10">
+						<p className="textOne">Crafted by Central PA's wood master</p>
+						<p className="textTwo">James L. Verbeck II</p>
+					</div>
+
+			
+					
+				</div>
+				<div className="col-md-4">
+					
+				</div>
 			</div>
 		</div>
 		

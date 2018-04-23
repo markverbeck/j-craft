@@ -4,13 +4,55 @@
 	height: 280px;
     width: 280px;
     margin-left: 42px;
+    margin-left: 328px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+   
+
 }
 
 .imgDiv{
 	border: 5px solid #3e1911;
 	background: white;
+	padding-left: 0px;
+    padding-right: 0px;
 }
 
 #bench{
 	width: 100%;
+}
+
+.textDiv {
+	background-image: url("../../files/woodBackground.jpeg");
+	background-size: 100%;
+	border-top: 5px solid #3e1911;
+	border-right: 5px solid #3e1911;
+	border-bottom: 5px solid #3e1911;
+	
+
+}
+
+.carouselText {
+	font-size: 26px;
+	padding-top: 105px;
+	padding-bottom: 125px;
+	color: white;
+	text-shadow: 3px 3px black;
+	font-family: 'Holtwood One SC', serif;
+
+
+}
+
+#closeBench {
+	height: 288px;
+}
+
+#jLogo {
+	background-image: url("../../files/woodBackground.jpeg");
+	background-size: 100%;
+}
+
+.dot {
+	margin-left: -61px;
+	
 }
