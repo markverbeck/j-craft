@@ -2,6 +2,7 @@ import React, { Component } from "react";
 // import { Link } from "react-router-dom";
 import API from "../../utils/API";
 import NavBar from "../../components/NavBar";
+import Footer from "../../components/Footer";
 
 
 
@@ -9,8 +10,21 @@ class Contact extends Component {
 	render(){
 		return(
 			<div>
-				<NavBar />
-				<h1>Contact Page</h1>
+				<div className="container">
+					<div className="row">
+						<div className="col-md-12">
+							<NavBar />
+						</div>
+					</div>
+				</div>
+
+				<div className="container">
+					<div className="row">
+						<div className="col-md-12">
+							<Footer />
+						</div>
+					</div>
+				</div>
 			</div>
 			);
 	}

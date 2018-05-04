@@ -1,0 +1,61 @@
+#image {
+	width: 94%;
+	border: 3px solid #3e1911;
+    margin: 12px;
+}
+
+.img-circle {
+    border-radius: 27%;
+}
+
+.imageDiv {
+	background-image: url("../../files/woodBackground.jpeg");
+	background-size: 100%;
+	border: 5px solid #3e1911;
+	padding: 0px;
+	border-radius: 27%;
+	width: 36%;
+	box-shadow: 4px 10px 18px black;
+	margin-left: 49px;
+}
+
+#bigText {
+	font-family: 'Holtwood One SC', serif;
+	color: #3e1911;
+	text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+	padding: 16px;
+    margin-left: 121px;
+    line-height: 39px;
+    letter-spacing: 2px;
+    text-decoration: underline;
+}
+
+#smallText {
+	font-family: 'Marck Script', cursive;
+	color: #3e1911;
+	text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+	background: #f5dcbe;
+	padding: 33px;
+    font-size: 19px;
+    border: 3px solid #3e1911;
+	
+}
+
+.smallTextDiv {
+	background-image: url("../../files/woodBackground.jpeg");
+	background-size: 100%;
+	border: 5px solid #3e1911;
+	box-shadow: 4px 10px 18px black;
+	padding: 13px;
+    margin-top: 55px;
+    margin-left: 27px;
+}
+
+#bigLittleText {
+	color: #3e1911;
+	text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+	padding: 16px;
+    line-height: 39px;
+    letter-spacing: 2px;
+    font-family: 'Marck Script', cursive;
+}

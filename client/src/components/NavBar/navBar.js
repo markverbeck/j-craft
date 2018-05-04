@@ -13,10 +13,10 @@ class NavBar extends Component {
 			  <div className="container-fluid">
 			    <div className="navbar-header">
 
-			    <button id="dropButton" type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-			        <span class="icon-bar"></span>
-			        <span class="icon-bar"></span>
-			        <span class="icon-bar"></span>                        
+			    <button id="dropButton" type="button" className="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+			        <span className="icon-bar"></span>
+			        <span className="icon-bar"></span>
+			        <span className="icon-bar"></span>                        
 			    </button>
 			      <img id="navLogo" className="img-responsive" src={JcraftLogo}></img>
 			    </div>
