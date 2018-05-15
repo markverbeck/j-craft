@@ -1,4 +1,3 @@
 module.exports = {
-  Score: require("./score"),
-  SignIn: require("./signin")
+  Messages: require("./messages")
 };

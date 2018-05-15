@@ -1,0 +1,35 @@
+.form-control {
+	border: 3px solid #3e1911;
+}
+
+label {
+	font-family: 'Holtwood One SC', serif;
+	color: #3e1911;
+	text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+	font-size: 20px;
+	letter-spacing: 3px;
+}
+.btn {
+	border: 3px solid #3e1911;
+}
+
+.logoContact {
+	padding: 17px;
+}
+
+#logoDivContact {
+	background-image: url("../../files/woodBackground.jpeg");
+	background-size: 100%;
+	border: 5px solid #3e1911;
+	height: 337px;
+    width: 337px;
+    box-shadow: 4px 10px 18px black;
+    margin-left: 153px;
+    margin-top: 78px;
+}
+
+.thanksDiv {
+	background-image: url("../../files/woodBackground.jpeg");
+	background-size: 100%;
+	border: 5px solid #3e1911;
+}

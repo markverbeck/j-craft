@@ -1,7 +1,7 @@
 const router = require("express").Router();
-const scoreRoutes = require("./scores");
+const jCraftRoutes = require("./jCraftDB");
 
 // Book routes
-router.use("/scores", scoreRoutes);
+router.use("/jcraft", jCraftRoutes);
 
 module.exports = router;
