@@ -1,3 +1,4 @@
 module.exports = {
-  Messages: require("./messages")
+  Messages: require("./messages"),
+  SignIn: require("./signin")
 };

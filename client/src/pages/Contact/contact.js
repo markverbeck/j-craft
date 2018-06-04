@@ -6,6 +6,8 @@ import Footer from "../../components/Footer";
 import "./contact.css";
 import JcraftLogo from "../../files/j-craft-logo.png";
 
+const moment = require('moment');
+
 
 class Contact extends Component {
 	state ={
@@ -24,7 +26,7 @@ class Contact extends Component {
     this.setState({
       [name]: value
     });
-    
+     
     };
 
     handleFormSubmit = event => {
@@ -34,7 +36,8 @@ class Contact extends Component {
     		lastName: this.state.lastName,
     		email: this.state.email,
     		phoneNumber: this.state.telephone,
-    		message: this.state.message
+    		message: this.state.message,
+    		messageRecieved: moment().format('MMMM Do YYYY, h:mm:ss a')
     	})
 	    	.then(res => this.setState({thanks: "Thank yor for contacting us!", animateClass:"thanksDiv animated fadeInDown", logoClass: "animated fadeOutDown"}))
 	        .catch(err => console.log(err));
@@ -91,7 +94,7 @@ class Contact extends Component {
 						<div className="col-md-6">
 
 							<div id="thanksDiv" className={this.state.animateClass}>
-								<h1 className="">{this.state.thanks}</h1>
+								<h1 className="thanks">{this.state.thanks}</h1>
 							</div>
 							
 							<div id="logoDivContact" className={this.state.logoClass}>

@@ -7,11 +7,24 @@ export default {
 
 	createMessage: function(messageData){
 		return axios.post("/api/jcraft", messageData);
+	},
+
+	signUp: function(signUpData){
+		return axios.post("/api/jcraft/admin/signup", signUpData);
+	},
+
+	loggedIn: function(logInData){
+		return axios.get("/api/jcraft/user/" + logInData);
+	},
+
+	signOut: function(logOutData){
+		return axios.put("/api/jcraft/user/signout", logOutData);
+	},
+
+	logIn: function(logInData){
+		return axios.put("/api/jcraft/user/login", logInData);
 	}
 
-	// signUp: function(signUpData){
-	// 	return axios.post("/api/scores/user", signUpData);
-	// },
 	// loggedIn: function(logInData){
 	// 	return axios.get("api/scores/user/" + logInData);
 	// },

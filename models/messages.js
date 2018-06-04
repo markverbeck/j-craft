@@ -8,7 +8,7 @@ const messagesSchema = new Schema({
   email: { type: String, required: true },
   phoneNumber: String,
   message: { type: String, required: true },
-  messageRecieved: { type: String, default: moment().format('MMMM Do YYYY, h:mm:ss a')}
+  messageRecieved: String
 
  
 });
