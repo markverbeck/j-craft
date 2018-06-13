@@ -50,6 +50,7 @@ class AdminSignUp extends Component {
 						<div className="col-md-4"></div>
 						<div className="col-md-4">
 							<form action="/action_page.php">
+								<h1 className="text-center">Sign Up Page.</h1>
 							  <div className="form-group">
 							    <label for="firstName">First Name:</label>
 							    <input value={this.state.firstName} onChange={this.handleInputChange} name="firstName" type="text" className="form-control" id="firstName"></input>

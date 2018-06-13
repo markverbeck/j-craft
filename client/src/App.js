@@ -6,8 +6,9 @@ import Contact from "./pages/Contact";
 import Shop from "./pages/Shop";
 import AdminHome from "./pages/AdminHome";
 import AdminSignUp from "./pages/AdminSignUp";
-import AdminLogOut from "./pages/AdminLogOut";
+import SecurityQuestions from "./pages/SecurityQuestions";
 import AdminLogIn from "./pages/AdminLogIn";
+import Messages from "./pages/Messages";
 
 const App = () => 
   <Router>
@@ -17,8 +18,10 @@ const App = () =>
       <Route exact path="/contact" component={Contact} />
       <Route exact path="/shop" component={Shop} />
       <Route exact path="/admin" component={AdminHome} />
-      <Route exact path="/admin/signup" component={AdminSignUp} />
+      <Route exact path="/admin/signup/vk832vlpa57/noq60nraxi" component={AdminSignUp} />
       <Route exact path="/admin/login" component={AdminLogIn} />
+      <Route exact path="/admin/security" component={SecurityQuestions} />
+      <Route exact path="/admin/messages" component={Messages} />
     </Switch>
   </Router>
 

@@ -23,6 +23,14 @@ export default {
 
 	logIn: function(logInData){
 		return axios.put("/api/jcraft/user/login", logInData);
+	},
+
+	unreadMessages: function(unreadMessagesData){
+		return axios.get("/api/jcraft/user/unreadmessages/" + unreadMessagesData);
+	},
+
+	readMessages: function(readMessageData){
+		return axios.get("/api/jcraft/user/readmessages/" + readMessageData);
 	}
 
 	// loggedIn: function(logInData){

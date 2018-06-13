@@ -1,12 +1,14 @@
 import React, { Component } from "react";
 import API from "../../utils/API";
 import "./adminNav.css";
+import { Redirect } from 'react-router';
 
 class AdminNav extends Component {
 	state = {
-		loggedIn:"",
+		loggedIn:false,
 		userName:"",
-		password:""
+		password:"",
+		
 	}
 
 	componentDidMount() {
@@ -17,6 +19,7 @@ class AdminNav extends Component {
 			password: res.data[0].password
 		}))
 		.catch(err => console.log(err));
+
 	};
 
 	signOut = () =>{
@@ -30,6 +33,7 @@ class AdminNav extends Component {
 
 	reload = () =>{
   		this.setState({loggedIn: false});
+  		window.location.reload();
   		}
 
 
@@ -42,7 +46,7 @@ class AdminNav extends Component {
 			  <div className="jumbotron text-center">
 			    <h1>J-Craft Admin Page</h1>
 			    <h2>Welcome {this.state.userName}!</h2>
-			    <a href="#">Messages   </a>
+			    <a href="/admin/messages">Messages   </a>
 			    <a href="#"> Inventory   </a>
 			    <a href="#"> Add Inv   </a>
 			    <a href="#"> Manage Inv  </a>
@@ -51,21 +55,17 @@ class AdminNav extends Component {
 			</div>
       	</div>
       )
-	}else{
+	}else if (this.state.loggedIn === false){
 		return(
 			<div>
 	      		<div className="container">
 				  <div className="jumbotron text-center">
 				    <h1>J-Craft Admin Page</h1>
-				    <a href="#">Messages   </a>
-				    <a href="#"> Inventory   </a>
-				    <a href="#"> Add Inv   </a>
-				    <a href="#"> Manage Inv   </a>
 				    <a href="/admin/login"> LogIn   </a>
-				    <a href="/admin/signup"> SignUp</a>
+				    <a href="/admin/security"> SignUp</a>
 				  </div>
 				</div>
-	      	</div>
+			</div>
 			)
 	}
   }

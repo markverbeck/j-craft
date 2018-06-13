@@ -10,8 +10,12 @@ class AdminLogIn extends Component {
    		loggedIn:false,
    		logUser:"",
    		logPass:"",
-   		incorrect:""
+   		incorrect:"",
+   		messages: [],
+   		firstName: "Big"
     };
+
+    
 
     handleInputChange = event => {
     const { name, value } = event.target;
@@ -71,6 +75,7 @@ class AdminLogIn extends Component {
 					<div className="row">
 						<div className="col-md-4"></div>
 						<div className="col-md-4">
+							<h1 className="text-center">Log In</h1>
 							<h2>{this.state.incorrect}</h2>
 							<form action="/action_page.php">
 							  <div className="form-group">

@@ -38,6 +38,20 @@ module.exports = {
   	.findOneAndUpdate(query, {loggedin: true})
   	.then(dbModel=> res.json(dbModel))
   	.catch(err=> res.status(422).json(err));
+  },
+
+  unreadMessages: function(req, res){
+  	db.Messages
+      .find({messageRead: req.params.messageread})
+      .then(dbModel => {console.log(dbModel); return res.json(dbModel);})
+      .catch(err => res.status(422).json(err));
+  },
+
+  readMessages: function(req, res) {
+  	db.Messages
+  	  .find({messageRead: req.params.messageread})
+  	  .then(dbModel => {console.log(dbModel); return res.json(dbModel);})
+      .catch(err => res.status(422).json(err));
   }
 
 }

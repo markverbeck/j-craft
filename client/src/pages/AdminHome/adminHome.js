@@ -21,11 +21,14 @@ class AdminHome extends Component {
 		.catch(err => console.log(err));
 	};
 
+	
+
 	render(){
 		if(this.state.loggedIn === true){
 		return(
 			<div >
 				<AdminNav />
+
 				<div className="container">
 					<div className="row">
 						<div className="col-md-12 text-center">
@@ -43,7 +46,7 @@ class AdminHome extends Component {
 					<div className="container">
 					<div className="row">
 						<div className="col-md-12 text-center">
-							<h1>Please <a href="/admin/login">Login</a> or <a href="/admin/signup">Signup</a>.</h1>
+							<h1>Please <a href="/admin/login">Login</a> or <a href="/admin/security">Signup</a>.</h1>
 						</div>
 					</div>
 				</div>

@@ -8,7 +8,8 @@ const messagesSchema = new Schema({
   email: { type: String, required: true },
   phoneNumber: String,
   message: { type: String, required: true },
-  messageRecieved: String
+  messageRecieved: String,
+  messageRead: {type:Boolean, default: false}
 
  
 });
