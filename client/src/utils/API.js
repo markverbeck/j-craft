@@ -31,7 +31,19 @@ export default {
 
 	readMessages: function(readMessageData){
 		return axios.get("/api/jcraft/user/readmessages/" + readMessageData);
-	}
+	},
+
+	markRead: function(markReadData){
+		return axios.put("/api/jcraft/user/" + markReadData);
+	},
+
+	unread: function(unreadData){
+		return axios.put("/api/jcraft/user/markunread/" + unreadData);
+	},
+
+	deleteMessage: function(deleteData){
+		return axios.delete("/api/jcraft/user/deletemessage/" + deleteData);
+	},
 
 	// loggedIn: function(logInData){
 	// 	return axios.get("api/scores/user/" + logInData);

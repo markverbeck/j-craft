@@ -23,4 +23,13 @@ router.route("/user/unreadmessages/:messageread")
 router.route("/user/readmessages/:messageread")
   .get(jCraftController.readMessages);
 
+router.route("/user/:markread")
+  .put(jCraftController.markRead);
+
+router.route("/user/markunread/:unread")
+  .put(jCraftController.unread);
+
+router.route("/user/deletemessage/:deletemessage")
+  .delete(jCraftController.deleteMessage);
+
 module.exports = router;

@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import API from "../../utils/API";
 import AdminNav from "../../components/AdminNav";
 import { Redirect } from 'react-router';
+import "./messages.css";
 
 class Messages extends Component {
 	state = {
@@ -25,6 +26,32 @@ class Messages extends Component {
     	.then(res => this.setState({readMessages: res.data})).then(() => console.log(this.state.readMessages))
 		.catch(err => console.log(err));
 	};
+
+	markReadMessage = id =>{
+		API.markRead(id)
+		.then(res => console.log(res))
+		.then(() => this.unRead())
+		.then(() => this.read())
+		.catch(err => console.log(err));
+	};
+
+	markUnreadMessage = id => {
+		API.unread(id)
+		.then(res => console.log(res))
+		.then(() => this.unRead())
+		.then(() => this.read())
+		.catch(err => console.log(err));
+	};
+
+	deleteMessage = id => {
+		API.deleteMessage(id)
+		.then(res => console.log(res))
+		.then(() => this.unRead())
+		.then(() => this.read())
+		.catch(err => console.log(err));
+	};
+
+	
 	render() {
 		const unRead = this.state.unreadMessages.map((message, index) =>
 			<div className="panel-group">
@@ -34,10 +61,9 @@ class Messages extends Component {
 			    	<h2><span>{index +1}. </span>{message.firstName} {message.lastName}</h2>
 			        <h4><span>Email: </span>{message.email}</h4>
 			        <h4><span>Phone Number: </span>{message.phoneNumber}</h4>
-			        <div id="buttons">
-			        <button type="button" class="btn btn-success">Mark Read</button>
-			        <br></br>
-			        <button type="button" class="btn btn-danger">Delete</button>
+			        <div className="buttons">
+			        <button type="button" className="btn btn-success messageButton" onClick={() => this.markReadMessage(message._id)}>Mark Read</button>
+			        <button type="button" className="btn btn-danger messageButton" onClick= {() => this.deleteMessage(message._id)}>Delete</button>
 			        </div>
 			      
 			    </div>
@@ -59,10 +85,9 @@ class Messages extends Component {
 			    	<h2><span>{index +1}. </span>{message.firstName} {message.lastName}</h2>
 			        <h4><span>Email: </span>{message.email}</h4>
 			        <h4><span>Phone Number: </span>{message.phoneNumber}</h4>
-			        <div id="buttons">
-			        <button type="button" class="btn btn-success">Mark Read</button>
-			        <br></br>
-			        <button type="button" class="btn btn-danger">Delete</button>
+			        <div className="buttons">
+			        <button type="button" className="btn btn-success messageButton" onClick={() => this.markUnreadMessage(message._id)}>Mark Unread</button>
+			        <button type="button" className="btn btn-danger messageButton" onClick= {() => this.deleteMessage(message._id)}>Delete</button>
 			        </div>
 			      
 			    </div>

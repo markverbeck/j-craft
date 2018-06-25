@@ -48,7 +48,7 @@ class AdminNav extends Component {
 			    <h2>Welcome {this.state.userName}!</h2>
 			    <a href="/admin/messages">Messages   </a>
 			    <a href="#"> Inventory   </a>
-			    <a href="#"> Add Inv   </a>
+			    <a href="/admin/addinv"> Add Inv   </a>
 			    <a href="#"> Manage Inv  </a>
 			    <a href="#" onClick={this.signOut}> Log Out</a>
 			  </div>

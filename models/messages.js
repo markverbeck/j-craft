@@ -9,7 +9,7 @@ const messagesSchema = new Schema({
   phoneNumber: String,
   message: { type: String, required: true },
   messageRecieved: String,
-  messageRead: {type:Boolean, default: false}
+  messageRead: {type: Boolean, default: false}
 
  
 });

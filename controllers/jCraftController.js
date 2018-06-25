@@ -52,6 +52,32 @@ module.exports = {
   	  .find({messageRead: req.params.messageread})
   	  .then(dbModel => {console.log(dbModel); return res.json(dbModel);})
       .catch(err => res.status(422).json(err));
+  },
+
+  markRead: function(req, res) {
+  	const query = {_id: req.params.markread};
+  	db.Messages
+  	  .findOneAndUpdate(query, {messageRead: true})
+  	  .then(dbModel=> res.json(dbModel))
+  	  .catch(err=> res.status(422).json(err));
+  },
+
+ 
+  unread: function(req, res) {
+  	const query = {_id: req.params.unread};
+  	db.Messages
+  	  .findOneAndUpdate(query, {messageRead: false})
+  	  .then(dbModel=> res.json(dbModel))
+  	  .catch(err=> res.status(422).json(err));
+  },
+
+  deleteMessage: function(req, res) {
+  	db.Messages
+  	  .deleteOne({_id: req.params.deletemessage})
+  	  .then(dbModel => res.json(dbModel))
+  	  .catch(err => res.status(422).json(err));
   }
+
+  
 
 }

@@ -9,6 +9,7 @@ import AdminSignUp from "./pages/AdminSignUp";
 import SecurityQuestions from "./pages/SecurityQuestions";
 import AdminLogIn from "./pages/AdminLogIn";
 import Messages from "./pages/Messages";
+import AddInv from "./pages/AddInv";
 
 const App = () => 
   <Router>
@@ -22,6 +23,7 @@ const App = () =>
       <Route exact path="/admin/login" component={AdminLogIn} />
       <Route exact path="/admin/security" component={SecurityQuestions} />
       <Route exact path="/admin/messages" component={Messages} />
+      <Route exact path="/admin/addinv" component={AddInv} />
     </Switch>
   </Router>
 
